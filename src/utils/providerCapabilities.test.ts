@@ -334,6 +334,22 @@ describe("providerNeedsRouting", () => {
           }),
         ),
       ).toBe(true);
+
+      expect(
+        providerNeedsRouting(
+          "claude",
+          mkProvider({
+            category: "third_party",
+            meta: { apiFormat: "anthropic" },
+            settingsConfig: {
+              env: {
+                ANTHROPIC_SMALL_FAST_MODEL:
+                  "claude-3-5-haiku-20241022[1M]",
+              },
+            },
+          }),
+        ),
+      ).toBe(true);
     });
   });
 
