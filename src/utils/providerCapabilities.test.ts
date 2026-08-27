@@ -343,8 +343,7 @@ describe("providerNeedsRouting", () => {
             meta: { apiFormat: "anthropic" },
             settingsConfig: {
               env: {
-                ANTHROPIC_SMALL_FAST_MODEL:
-                  "claude-3-5-haiku-20241022[1M]",
+                ANTHROPIC_SMALL_FAST_MODEL: "claude-3-5-haiku-20241022[1M]",
               },
             },
           }),
